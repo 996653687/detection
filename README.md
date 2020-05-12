@@ -22,14 +22,17 @@ Template:
 
 Example Usage:
  
-0 - Prepares test image frames and template
-1 - Runs PREPROCESS part of the setup_visualization script to converts images into csv (under ./data/test_data/NAME/csv/)
+0 - Prepares test image frames and template.
+
+1 - Runs PREPROCESS part of the setup_visualization script to converts images into csv (under ./data/test_data/NAME/csv/).
+
 2 - compiles and runs detections on the test images:
      ./a.out [BASE_PATH] [OUTPUT_SUBDIR] [DOWNSAMPLE_SCALE] [TOP_K_PARTICLES]" << std::endl;
        BASE_PATH - where test images and templates are stored
        OUTPUT_SUBDIR - subdirectory to store outputs
        DOWNSAMPLE_SCALE - scale to downsample images and templates
        TOP_K_PARTICLES - the number of top convolution response pixels used to improve detection and initialize KalmanFilter
-     e.g. g++ main.cpp Detector.cpp KalmanFilter.cpp Util.cpp  -std=c++2a && ./a.out ./data/test_data/ball/ output/ 8 20
+     e.g. g++ main.cpp Detector.cpp KalmanFilter.cpp Util.cpp  -std=c++2a && ./a.out ./data/test_data/ball/ output/ 8 20.
+     
 3 - Runs VISUALIZE part of the setup_visualization script to debug the detection/filtering results
 
