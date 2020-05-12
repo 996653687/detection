@@ -1,5 +1,5 @@
 ## Detection
-Detection, filter and tracking moving objects experiments (Tested on OS X)
+Detection, filter and tracking of moving objects in image frames (Tested on OS X)
 
 # Prerequisite:
 G++, Jupyter (https://jupyter.org), numpy, matplotlib, pillow (https://python-pillow.org)
