@@ -31,11 +31,11 @@ public:
             assert(Util::mk_dir(output_path_));
         }
 
-        downsample_scale_ = 8;
+        downsample_scale_ = 8;  // Default
         assert(Util::is_int(string(args[3])));
         downsample_scale_ = std::stoi(args[3]);
 
-        top_K_particles_ = 20;
+        top_K_particles_ = 20;  // Default
         assert(Util::is_int(string(args[4])));
         top_K_particles_ = std::stoi(args[4]);
 
@@ -149,6 +149,7 @@ int main(int argc, char** args) {
     vector<vector<vector<int>>> frame;
     string frame_img_filename;
     int num_frames = 0;
+    // TODO(jifu) Parameterizes in config
     int init_filter_step = 2;
     while (config.read_frame(&frame, &frame_img_filename)) {
         num_frames++;
