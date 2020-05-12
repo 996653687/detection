@@ -40,3 +40,7 @@ Under ./data/test_data/NAME, must be named in ascending order according to time 
      
 3 - Runs VISUALIZE part of the setup_visualization script to debug the detection/filtering results
 
+# Example Output:
+
+![Example_output](visualization.jpg)
+
