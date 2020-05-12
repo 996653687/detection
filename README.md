@@ -1,26 +1,27 @@
-# Detection
+## Detection
 Detection, filter and tracking moving objects experiments (Tested on OS X)
 
-Prerequisite:
-G++
-Jupyter (https://jupyter.org)
+# Prerequisite:
+G++, Jupyter (https://jupyter.org), numpy, matplotlib, pillow (https://python-pillow.org)
 
-Main interface:
+# Main interface:
 setup_visualization.ipynb
 
-Code structure:
+# Code structure:
 main.cpp - main pipeline
+
 Detector* - object detection in frames of images (video) given template
+
 KalmanFilter* - kalman filter (2D, constant 1st derivative so far) used to filter detection in each frame and estiamate states (position)
 
-Test data:
+# Test data:
 Under ./data/test_data/NAME, must be named in ascending order according to time stamps (01.jpg, 02.jpg,...)
 
-Template:
+# Template:
 ./data/test_data/NAME/template/template.jpg
 
 
-Example Usage:
+# Example Usage:
  
 0 - Prepares test image frames and template.
 
@@ -28,7 +29,7 @@ Example Usage:
 
 2 - compiles and runs detections on the test images:
 
-     ./a.out [BASE_PATH] [OUTPUT_SUBDIR] [DOWNSAMPLE_SCALE] [TOP_K_PARTICLES]" << std::endl;
+     ./a.out [BASE_PATH] [OUTPUT_SUBDIR] [DOWNSAMPLE_SCALE] [TOP_K_PARTICLES]
      
        BASE_PATH - where test images and templates are stored;
        OUTPUT_SUBDIR - subdirectory to store outputs;
